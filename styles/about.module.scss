@@ -1,0 +1,39 @@
+@import 'mixins';
+
+.Background{
+    @include Background
+}
+
+.Container{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 4vh;
+    width: 60vw;
+    
+   
+
+    p{
+        font-size: 2.25rem;
+    }
+}
+
+.Links{
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 1vw;
+    padding-bottom: 3vh;
+}
+
+.Resume{
+
+    a{
+        color: black
+    }
+    a:hover{
+        color:grey;
+    }
+
+}

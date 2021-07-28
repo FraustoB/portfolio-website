@@ -1,0 +1,44 @@
+@mixin scrn1024(){
+    @media(max-width: 1024px){
+        @content;
+    }
+}
+
+@mixin scrn768(){
+    @media(max-width: 768px){
+        @content;
+    }
+}
+
+@mixin scrn414(){
+    @media(max-width: 414px){
+        @content;
+    }
+}
+
+@mixin scrn375(){
+    @media(max-width: 375px){
+        @content;
+    }
+}
+@mixin scrn360(){
+    @media(max-width: 360px){
+        @content;
+    }
+}
+
+@mixin scrn320(){
+    @media(max-width: 320px){
+        @content;
+    }
+}
+
+@mixin Background(){
+    background-color:#eeefea;
+    color: black;
+    height: 77vh;
+    padding: 5rem;
+    margin: 2rem;
+    border: 10px grey;
+    border-radius: 30px;
+}

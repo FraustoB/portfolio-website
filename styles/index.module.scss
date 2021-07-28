@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;400&display=swap');
+@import 'mixins';
+.background{
+    height:100vh;
+    color: white;
+    margin: auto;
+    width: 50%;
+    @include scrn1024{
+        display: flex;
+        flex-direction: column;
+    }
+    @include scrn375{
+     height:667px; 
+
+    }
+ 
+}
+
+.title{
+    font-size: 4rem; 
+    font-family: 'Source Code Pro';
+    text-align: center;
+    padding-top: 19rem;
+    padding-bottom: 2.5rem;
+    margin:0;
+
+    @include scrn1024{
+        margin-top:10rem;
+        margin-left: -13rem;
+        width: 90vw;
+    }
+    @include scrn768{
+        margin-left: -9rem;
+        margin-top: 6rem;
+    }
+    @include scrn414{
+            font-size: 2rem;
+            margin-top: -1rem;
+            margin-left: -5rem;
+    }
+
+    @include scrn375{
+        margin-top: -4rem;
+        margin-left: -4.6rem;
+    }
+    @include scrn360{
+        margin-top: -5rem;
+        width: 100vw;
+        font-size: 2rem;
+        padding-right: 1.5rem;
+        
+    }
+
+    @include scrn320{
+        font-size: 1.75rem;
+        margin-top: -7rem;
+    }
+}
+
+.linkContainer{
+    align-self: center;
+    border-top: .25rem solid white;
+    text-align: center;
+    font-size: 2rem;
+    padding: 1rem;
+    
+    @include scrn1024{
+        width: 60vw;
+    }
+
+    @include scrn414{
+        display: flex;
+        width: 70vw;
+        margin-top: -.5rem;
+        a{
+            font-size: 1.25rem;
+            margin-left: -.4rem;
+    }}
+
+    @include scrn375{
+        width: 75vw;
+
+        a{
+            margin-left: -.7rem;
+        }}
+
+    @include scrn320{
+        padding: 4px;
+    }
+
+    a{
+        text-decoration: none;
+        color:white;
+        padding: 2rem; 
+        
+        @include scrn1024{
+            padding: 1rem;
+        }
+        @include scrn320{
+            font-size: 1.2rem;
+        }
+    }
+        
+    a:hover{
+        color: grey;
+    }
+}
+
+.links{
+    padding: 2rem;
+    padding-top: 2rem;
+    text-decoration: none;
+    color:white;
+}
+
+
+
+
+

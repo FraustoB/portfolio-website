@@ -1,0 +1,13 @@
+@import 'mixins';
+
+.Background{
+    @include Background
+}
+
+
+.CardContainer{
+    display: flex;
+    justify-content: center;
+    gap: 12vw;
+    padding: 5vh;
+}
