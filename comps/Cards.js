@@ -13,8 +13,8 @@ export default function Cards({ title, description, sourceCode, liveSite, img })
                     <p>{description}</p>
                 </div>
                 <div className={styles.BtnContainer}>
-                    <a target="_blank" rel="noreferrer" href={liveSite} className="btn btn-secondary">Demo Site</a>
-                    <a target="_blank" rel="noreferrer" href={sourceCode} className="btn btn-secondary">{'<'}Source{'>'}</a>
+                    <a target="_blank" rel="noreferrer" href={liveSite} className="btn btn-secondary btn-small">Demo Site</a>
+                    <a target="_blank" rel="noreferrer" href={sourceCode} className="btn btn-secondary btn-small">{'<'}Source{'>'}</a>
                 </div>
 
             </div>

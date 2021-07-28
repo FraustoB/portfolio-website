@@ -10,4 +10,23 @@
     justify-content: center;
     gap: 12vw;
     padding: 5vh;
+
+    @include scrn1024{
+        flex-direction: column;
+        gap: 3vw;
+        padding: 1vh;
+        align-items: center; 
+        margin-top: -2vh;
+    }
+
+    @include scrn768{
+        gap: 9vw;
+    }
+
+    @include scrn414{
+        margin-top: 1rem;
+        gap: 15vw;
+    }
+
+    
 }

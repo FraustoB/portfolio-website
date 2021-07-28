@@ -41,4 +41,11 @@
     margin: 2rem;
     border: 10px grey;
     border-radius: 30px;
+
+    @include scrn414{
+        margin: 1rem .5rem;
+        height: 90%;
+        padding: 2rem;
+    
+    }
 }

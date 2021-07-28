@@ -16,6 +16,16 @@
 
     p{
         font-size: 2.25rem;
+
+
+    }
+
+
+    @include scrn414{
+        width: 100%;
+        p{
+            font-size: 1.5rem;
+        }
     }
 }
 
