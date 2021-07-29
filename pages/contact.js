@@ -1,3 +1,5 @@
+
+import Head from 'next/head';
 import styles from '../styles/contact.module.scss';
 import Navbar from '../comps/Navbar';
 import { useState } from 'react';
@@ -29,7 +31,7 @@ export default function Contact() {
 
     const handleSubmit=(e) => {
         e.preventDefault();
-        sendEmail(e);
+        // sendEmail(e);
         setContInfo({
             name: '',
             email: '',
@@ -41,6 +43,10 @@ export default function Contact() {
 
     return (
         <>
+            <Head>
+                <title> frausto | Contact </title>
+                <meta name='keywords' content='frausto' />
+            </Head>
             <Navbar />
             <div className={styles.Background}>
                 <div className={styles.Container}>

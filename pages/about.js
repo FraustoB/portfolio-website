@@ -1,3 +1,5 @@
+import Head from 'next/head';
+
 import styles from '../styles/about.module.scss';
 import Navbar from '../comps/Navbar';
 
@@ -5,6 +7,11 @@ export default function About() {
 
     return (
         <>
+            <Head>
+                <title> frausto | About </title>
+                <meta name='keywords' content='frausto' />
+            </Head>
+
             <Navbar />
             <div className={styles.Background}>
 

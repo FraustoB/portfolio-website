@@ -1,4 +1,4 @@
-
+import Head from 'next/head';
 import Cards from '../comps/Cards';
 import styles from '../styles/projects.module.scss';
 import Navbar from '../comps/Navbar';
@@ -9,7 +9,10 @@ export default function Projects() {
     return (
         <>
 
-
+            <Head>
+                <title> frausto | Projects </title>
+                <meta name='keywords' content='frausto' />
+            </Head>
             <Navbar />
             <div className={styles.Background}>
                 <div className={styles.CardContainer}>
