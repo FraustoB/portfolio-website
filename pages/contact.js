@@ -17,10 +17,14 @@ export default function Contact() {
             email: '',
             subject: '',
             message: '',
-            hasSent: false
+            hasSent: false,
+            nameError: '',
+            subjectError: ''
         }
     )
     const handleChange=(e) => setContInfo({ ...contInfo, [e.target.name]: e.target.value })
+
+
     function sendEmail(e) {
         e.preventDefault();
         emailjs.sendForm('service_jaqy12b', 'template_jdnim5a', e.target, 'user_WL8FlxANz3H5VBWNI7AB9')
@@ -31,16 +35,43 @@ export default function Contact() {
             });
     }
 
+    const validate=() => {
+        let nameError='';
+        let subjectError='';
+        if (!contInfo.subject) {
+            subjectError='Please Include Subject';
+        }
+        if (!contInfo.name) {
+            nameError='Please Include Name';
+        }
+        if (nameError||subjectError) {
+            setContInfo({ nameError, subjectError });
+            return false;
+        }
+
+
+
+        return true;
+    }
+
     const handleSubmit=(e) => {
         e.preventDefault();
-        // sendEmail(e);
-        setContInfo({
-            name: '',
-            email: '',
-            subject: '',
-            message: '',
-            hasSent: true
-        })
+        const isValid=validate();
+
+        if (isValid) {
+            console.log('is valid!')
+            // sendEmail(e);
+            setContInfo({
+                name: '',
+                email: '',
+                subject: '',
+                message: '',
+                hasSent: true,
+                nameError: '',
+                emailError: '',
+                subjectError: ''
+            })
+        }
     }
 
     return (
@@ -64,16 +95,20 @@ export default function Contact() {
                     </span>
 
                     <form onSubmit={handleSubmit}>
-                        {contInfo.hasSent? <p>Thank you! I'll get back to you soon</p>:''}
+                        {contInfo.hasSent? <p>Thank you! I'll get back to you soon</p>:[]}
 
-                        <input onChange={handleChange} value={contInfo.name} name='name' id='name' placeholder='Name' />
-                        <input onChange={handleChange} value={contInfo.email} name='email' id='email' placeholder='Email' />
-                        <input onChange={handleChange} value={contInfo.subject} name='subject' id='subject' placeholder='Subject' />
-                        <textarea onChange={handleChange} value={contInfo.message} name='message' id='message' placeholder='Message'
+                        <input onChange={handleChange} value={contInfo.name} type='text' name='name' id='name' placeholder='Name' />
+                        <input onChange={handleChange} value={contInfo.email} type='email' name='email' id='email' placeholder='Email' />
+                        <input onChange={handleChange} value={contInfo.subject} type='text' name='subject' id='subject' placeholder='Subject' />
+                        <textarea onChange={handleChange} value={contInfo.message} type='text' name='message' id='message' placeholder='Message'
                             className='Contact-message' />
 
                         <button className='btn btn-secondary'>Send Off</button>
                     </form>
+                    <div className={styles.error}>
+                        <span>{contInfo.nameError}</span>
+                        <span>{contInfo.subjectError}</span>
+                    </div>
 
                 </div>
             </div>)
