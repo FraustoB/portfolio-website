@@ -19,7 +19,8 @@ export default function Contact() {
             message: '',
             hasSent: false,
             nameError: '',
-            subjectError: ''
+            subjectError: '',
+            blank: ''
         }
     )
     const handleChange=(e) => setContInfo({ ...contInfo, [e.target.name]: e.target.value })
@@ -95,7 +96,7 @@ export default function Contact() {
                     </span>
 
                     <form onSubmit={handleSubmit}>
-                        {contInfo.hasSent? <p>Thank you! I'll get back to you soon</p>:[]}
+                        {contInfo.hasSent? <p>Thank you! I'll get back to you soon</p>:contInfo.blank}
 
                         <input onChange={handleChange} value={contInfo.name} type='text' name='name' id='name' placeholder='Name' />
                         <input onChange={handleChange} value={contInfo.email} type='email' name='email' id='email' placeholder='Email' />
