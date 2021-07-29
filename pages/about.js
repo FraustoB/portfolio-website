@@ -24,7 +24,6 @@ export default function About() {
                         <a rel="noreferrer noopener" target="_blank" href='https://github.com/FraustoB'><Image src="/github.png" alt='github.png' width={45} height={45} /></a>
                         <a rel="noreferrer noopener" target="_blank" href='https://www.linkedin.com/in/brandon-frausto-13a712213/'><Image alt='linkedin.png' src="/linkedin.png" width={45} height={45} /></a>
                     </div>
-
                     <div className={styles.Resume}>
                         <a rel="noreferrer noopener" target="_blank" href='https://rxresu.me/r/ksluh6'><h2>Resume</h2></a>
                     </div>
