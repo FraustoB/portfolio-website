@@ -5,6 +5,8 @@ import Navbar from '../comps/Navbar';
 import { useState } from 'react';
 import emailjs from 'emailjs-com';
 
+import Image from 'next/image';
+
 
 
 
@@ -52,7 +54,12 @@ export default function Contact() {
                 <div className={styles.Container}>
 
                     <span>
-                        <img alt='mail' src="https://img.icons8.com/pastel-glyph/64/000000/email-marketing--v2.png" />
+                        <Image
+                            src="/email.png"
+                            alt='mail'
+                            height={45}
+                            width={45}
+                        />
                         <h2> Lets get in touch</h2>
                     </span>
 
