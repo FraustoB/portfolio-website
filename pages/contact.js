@@ -87,7 +87,7 @@ export default function Contact() {
                     </span>
 
                     <form onSubmit={handleSubmit}>
-                        {hasSent? <p>Thank you! I'll get back to you soon</p>:contInfo.blank}
+                        <div>{hasSent? <p>Thank you! I'll get back to you soon</p>:contInfo.blank}</div>
 
                         <input onChange={handleChange} value={contInfo.name} type='text' name='name' id='name' placeholder='Name' />
                         <input onChange={handleChange} value={contInfo.email} type='email' name='email' id='email' placeholder='Email' />
