@@ -20,8 +20,8 @@ export default function About() {
                         in love with learning new technologies, and creative Reactive Web applications. Willing to work for any timezone and any location </p>
 
                     <div className={styles.Links}>
-                        <a rel="noreferrer noopener" target="_blank" href='https://github.com/FraustoB'><img alt='github' src="/github.png" /></a>
-                        <a rel="noreferrer noopener" target="_blank" href='https://www.linkedin.com/in/brandon-frausto-13a712213/'><img alt='linkedin' src="/linkedin.png" /> </a>
+                        <a rel="noreferrer noopener" target="_blank" href='https://github.com/FraustoB'><img alt='github.png' src="/github.png" /></a>
+                        <a rel="noreferrer noopener" target="_blank" href='https://www.linkedin.com/in/brandon-frausto-13a712213/'><img alt='linkedin.png' src="/linkedin.png" /> </a>
                     </div>
 
                     <div className={styles.Resume}>
