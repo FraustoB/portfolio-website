@@ -1,3 +1,5 @@
+@import 'mixins';
+
 .nav{
     margin: 0;
     padding: 0;
@@ -48,6 +50,12 @@
     margin: .5rem;
     text-decoration: none;
     font-family: 'Source Code Pro', monospace;
+    @include scrn1024{
+        font-size: 2rem;
+    }
+    @include scrn768{
+        font-size:1.5rem;
+    }
 }
 
 .LinksContainer{
@@ -61,6 +69,14 @@
     li{
         list-style: none;
         padding: 0 2rem;
+        font-size: 1.25rem;
+
+        @include scrn1024{
+            font-size: 1.5rem;
+        }
+        @include scrn768{
+            font-size:1rem;
+        }
         
     }
     li:hover{

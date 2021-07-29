@@ -6,7 +6,7 @@
 
 
 .Container{
-    height: 50vh;
+    height: 70vh;
     width: 40vw;
     margin: auto;
 
@@ -18,24 +18,140 @@
 
     form{
         display: flex;
+        justify-content: center;
         flex-direction: column;
         align-items: center;
          gap: 1rem;
          border: 2px solid #929191;
          border-radius: 10px;
-         height: 27rem;
-         padding-top: 3em;
+         height: 30rem;
+         padding-top: 1em;
          margin-top: 2em;
 
          input{
-            width: 40rem;
-            height: 2.5rem;
+            width: 35vw;
+            height: 2.5vw;
             border-radius: 7px;
          }
 
          textarea{
-            width: 40rem;
-            height: 9rem;
+            width: 35vw;
+            height: 7vw;
          }
+         
+
+         
     }
+
+    @include scrn1024{
+        width: 80vw;
+        margin-top: 2rem;
+        margin-left: 1em;
+        
+        form{
+            height: 45vh;
+            margin-left: -4.5vw;
+            input{
+                height: 4.5vh;
+                width: 75vw;
+                font-size: 2rem;
+            }
+            textarea{
+                width: 75vw;
+                height: 15vh;
+                font-size: 2rem;
+            }
+        }
+        h2{
+            font-size: 4rem;
+        }
+        button{
+            height: 5vh;
+            width: 15vw;
+            font-size: 1.5rem;
+        }
+
+
+    }
+
+    @include scrn768{
+        form{
+            height: 50vh;
+            width:80vw;
+            
+            input{
+                font-size: 1.5rem;
+
+            }
+            textarea{
+                width: 75vw;
+                height: 15vh;
+                font-size: 1.5rem;
+            }
+        }
+        h2{
+            font-size: 2rem;
+        }
+    }
+
+
+    @include scrn414{
+        margin-left: -.1em;
+    
+        h2{
+            font-size: 2rem;
+        }
+
+        form{
+            height: 55vh;
+            width: 90vw;
+
+            input{
+                font-size: 1rem;
+            }
+            textarea{
+                font-size: 1rem;
+            }
+
+            button{
+                font-size: 1rem;
+                width: 6rem;
+            }
+        }
+        }
+        @include scrn375{
+            h2{
+                font-size: 1.75rem;
+            }
+            img{
+                height: 3em;
+                width: 3em;
+            }
+        }
+        @include scrn320{
+
+            margin-left: -.5em;
+
+            h2{
+                font-size: 1.5rem;
+            }
+
+            form{
+                padding-top: 1em;
+
+                input{
+                    width: 85vw;
+                }
+                textarea{
+                    width: 85vw;
+                }
+                button{
+                    height: 2.5rem;
+                }
+            }
+                
+        
+        }
+     
+    
 }
