@@ -4,28 +4,30 @@ import styles from '../styles/contact.module.scss';
 import Navbar from '../comps/Navbar';
 import { useState } from 'react';
 import emailjs from 'emailjs-com';
-
 import Image from 'next/image';
 
-
+//Objec to be used for the initial state of the code
+const initialState=({
+    name: '',
+    email: '',
+    subject: '',
+    message: '',
+    nameError: '',
+    subjectError: '',
+    blank: ''
+})
 
 
 export default function Contact() {
-    const [contInfo, setContInfo]=useState(
-        {
-            name: '',
-            email: '',
-            subject: '',
-            message: '',
-            hasSent: false,
-            nameError: '',
-            subjectError: '',
-            blank: ''
-        }
-    )
-    const handleChange=(e) => setContInfo({ ...contInfo, [e.target.name]: e.target.value })
 
+    const [contInfo, setContInfo]=useState(initialState);
 
+    //The hasSent state will be used to dislay the message confirming the email was sent
+    const [hasSent, setHasSent]=useState(false);
+
+    const handleChange=(e) => setContInfo({ ...contInfo, [e.target.name]: e.target.value });
+
+    //this function needed to make sending email possible
     function sendEmail(e) {
         e.preventDefault();
         emailjs.sendForm('service_jaqy12b', 'template_jdnim5a', e.target, 'user_WL8FlxANz3H5VBWNI7AB9')
@@ -36,6 +38,7 @@ export default function Contact() {
             });
     }
 
+    //code that runs to ensure text fields are filled in the contact form
     const validate=() => {
         let nameError='';
         let subjectError='';
@@ -49,29 +52,17 @@ export default function Contact() {
             setContInfo({ nameError, subjectError });
             return false;
         }
-
-
-
         return true;
     }
 
+    //will only run if form isValid
     const handleSubmit=(e) => {
         e.preventDefault();
         const isValid=validate();
-
         if (isValid) {
-            console.log('is valid!')
-            // sendEmail(e);
-            setContInfo({
-                name: '',
-                email: '',
-                subject: '',
-                message: '',
-                hasSent: true,
-                nameError: '',
-                emailError: '',
-                subjectError: ''
-            })
+            sendEmail(e);
+            setHasSent(true);
+            setContInfo(initialState);
         }
     }
 
@@ -96,7 +87,7 @@ export default function Contact() {
                     </span>
 
                     <form onSubmit={handleSubmit}>
-                        {contInfo.hasSent? <p>Thank you! I'll get back to you soon</p>:contInfo.blank}
+                        {hasSent? <p>Thank you! I'll get back to you soon</p>:contInfo.blank}
 
                         <input onChange={handleChange} value={contInfo.name} type='text' name='name' id='name' placeholder='Name' />
                         <input onChange={handleChange} value={contInfo.email} type='email' name='email' id='email' placeholder='Email' />
