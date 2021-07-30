@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import styles from '../styles/navbar.module.scss';
 import { useState } from 'react';
 
@@ -16,9 +17,11 @@ export default function Navbar() {
             <div className={styles.Navbar}>
                 <Link href='/'><a style={{ textDecoration: 'none' }}> <div className={styles.Brand}>{'<'}frausto.dev{'>'}</div> </a></Link>
                 <button onClick={handleIsToggled}>
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                    <Image
+                        src='/burger.svg'
+                        alt='burger'
+                        height={25}
+                        width={25} />
                 </button>
 
 
