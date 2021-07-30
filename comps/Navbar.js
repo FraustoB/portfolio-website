@@ -17,11 +17,9 @@ export default function Navbar() {
             <div className={styles.Navbar}>
                 <Link href='/'><a style={{ textDecoration: 'none' }}> <div className={styles.Brand}>{'<'}frausto.dev{'>'}</div> </a></Link>
                 <button onClick={handleIsToggled}>
-                    <Image
-                        src='/burger.svg'
-                        alt='burger'
-                        height={25}
-                        width={25} />
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </button>
 
 
