@@ -18,7 +18,7 @@ export default function About() {
 
                 <div className={styles.Container}>
                     <p> Fullstack Web Developer currently living in Arlington Texas. Passionate about software developement,
-                        in love with learning new technologies, and creative Reactive Web applications. Willing to work for any timezone and any location </p>
+                        in love with learning new technologies, and creating Reactive Web applications. Open for relocation and remote work </p>
 
                     <div className={styles.Links}>
                         <a rel="noreferrer noopener" target="_blank" href='https://github.com/FraustoB'><Image src="/github.png" alt='github.png' width={45} height={45} /></a>
