@@ -4,7 +4,7 @@ const CardInfo={
         description: 'Mock Concept for a fictional asian restaurant, with reactive css elements',
         liveSite: 'https://wonton-website.vercel.app/',
         sourceCode: 'https://github.com/FraustoB/wonton-website',
-        img: '/WTS.png'
+        img: 'WTS.png'
     },
 
     ApiTranslator: {
