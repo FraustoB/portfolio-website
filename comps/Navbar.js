@@ -1,7 +1,8 @@
 import Link from 'next/link';
-import Image from 'next/image';
+
 import styles from '../styles/navbar.module.scss';
 import { useState } from 'react';
+import { FaBars } from 'react-icons/fa';
 
 
 export default function Navbar() {
@@ -17,9 +18,7 @@ export default function Navbar() {
             <div className={styles.Navbar}>
                 <Link href='/'><a style={{ textDecoration: 'none' }}> <div className={styles.Brand}>{'<'}frausto.dev{'>'}</div> </a></Link>
                 <button onClick={handleIsToggled}>
-                    <div></div>
-                    <div></div>
-                    <div></div>
+                    <span><FaBars /></span>
                 </button>
 
 
