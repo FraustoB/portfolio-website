@@ -22,7 +22,7 @@ export default function Contact() {
 
     const [contInfo, setContInfo]=useState(initialState);
 
-    //The hasSent state will be used to dislay the message confirming the email was sent
+    //The hasSent state will be used to display the message confirming the email was sent
     const [hasSent, setHasSent]=useState(false);
 
     const handleChange=(e) => setContInfo({ ...contInfo, [e.target.name]: e.target.value });

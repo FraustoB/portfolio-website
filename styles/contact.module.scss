@@ -1,15 +1,22 @@
 @import 'mixins';
 
 .Background{
-    @include Background
+    @include Background;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 
 .Container{
-    height: 70vh;
-    width: 40vw;
-    margin: auto;
-    margin-top: -2em;
+    height: 40rem;
+    width: 120%;
+
+    @media screen and (min-width: 851px){
+        width: 50rem;
+    }
+    
+   
 
     .error{
         margin-top: 1vw;
@@ -17,14 +24,6 @@
         color: red;
         justify-content: center;
         flex-direction: column;
-
-        @include scrn1024{
-            font-size: 2rem;
-        }
-        @include scrn768{
-            font-size: 1.5rem;
-            margin-left: -2rem;
-        }
     }
 
     span{
@@ -42,143 +41,22 @@
          border: 2px solid #929191;
          border-radius: 10px;
          height: 30rem;
-         padding-top: 1em;
-         margin-top: 2em;
+         margin-top: 1em;
 
          input{
-            width: 35vw;
-            height: 2.5vw;
+            width: 95%;
+            height: 3rem;
             border-radius: 7px;
          }
 
          textarea{
-            width: 35vw;
-            height: 7vw;
+            width: 95%;
+            height: 8rem;
          }
          
 
          
     }
 
-    @include scrn1024{
-        width: 80vw;
-        margin-top: 2rem;
-        margin-left: 1em;
-        
-        form{
-            height: 45vh;
-            margin-left: -4.5vw;
-            input{
-                height: 4.5vh;
-                width: 75vw;
-                font-size: 2rem;
-            }
-            textarea{
-                width: 75vw;
-                height: 15vh;
-                font-size: 2rem;
-            }
-        }
-        h2{
-            font-size: 4rem;
-        }
-        button{
-            height: 5vh;
-            width: 15vw;
-            font-size: 1.5rem;
-        }
-
-
-    }
-
-    @include scrn768{
-        margin-top: -1rem;
-        span{
-            margin-left: -4rem;
-        }
-        form{
-            height: 50vh;
-            width:80vw;
-            margin-left: -3rem;
-            
-            input{
-                font-size: 1.5rem;
-
-            }
-            textarea{
-                width: 75vw;
-                height: 15vh;
-                font-size: 1.5rem;
-            }
-            button{
-                width: 20vw;
-            }
-        }
-        h2{
-            font-size: 2.5rem;
-            
-        }
-    }
-
-
-    @include scrn414{
-        margin-left: 1.95em;
-    
-        h2{
-            font-size: 2rem;
-        }
-
-        form{
-            height: 55vh;
-            width: 90vw;
-
-            input{
-                font-size: 1rem;
-            }
-            textarea{
-                font-size: 1rem;
-            }
-
-            button{
-                font-size: 1rem;
-                width: 6rem;
-            }
-        }
-        }
-        @include scrn375{
-            h2{
-                font-size: 1.75rem;
-            }
-            img{
-                height: 3em;
-                width: 3em;
-            }
-        }
-        @include scrn320{
-            margin-top: -1rem;
-            margin-left: -.5em;
-            height:75vh;
-
-            h2{
-                font-size: 1.5rem;
-            }
-
-            form{
-                padding-top: 1em;
-
-                input{
-                    width: 85vw;
-                }
-                textarea{
-                    width: 85vw;
-                }
-                button{
-                    height: 2.5rem;
-                }
-            }
-                
-        
-        }
-     
     
 }

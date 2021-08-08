@@ -1,85 +1,37 @@
 @import 'mixins';
 
 .Card{
-    height: 40vh;
-    width: 27rem;
+    height: 22rem;
+    width: 20rem;
     border: 3px solid grey;
     background-color: white;
+    margin: none;
     img{
-        height: 20vh;
+        height: 10rem;
         width: 100%;
+        border-bottom: 1px solid black;
     }
 
-    @include scrn1024{
-        height: 34vh;
+    @media screen and (max-width: 356px){
+        width: 18rem;
+        height: 23rem;
     }
-
-    @include scrn768{
-        
-        height: 33vh;
-        width: 70%;
-        margin: auto;
-        margin-top: -2rem;
-
-        img{
-            height: 15vh;
-        }
-    }
-    @include scrn414{
-        height: 40vh;
-        width: 95%;
-        h5{
-            font-size: 1.2rem;
-        }
-        p{
-            font-size: .9rem;
-        }
-    }
-    @include scrn375{
-        height: 48vh;
-        img{
-            height: 20vh;
-        }
-    }
-
-    @include scrn320{
-        height: 52vh;
+    @media screen and (min-width: 1200px){
+        height: 22rem;
+        width: 23rem;
     }
 }
+
 
 .BtnContainer{
     display: flex;
     gap: 2rem;
-    margin-left: 6rem;
-
-    @include scrn768{
-        padding-right: 4rem;
-        padding-left: -1rem;
-        a{
-            font-size: .8rem;
-            
-        }
-
-    }
-
-    @include scrn414{
-        width: 100%;
-        margin-left: 4rem;
-        a{
-            font-size: .6rem;
-        }
-
-    }
-
-    @include scrn375{
-        margin-left: 3rem;
-    }
-
- 
-
-
+    justify-content: center;
+    border-top: 2px solid grey;
+    padding-top: .5rem;   
     
 
+    
 }
 
 
