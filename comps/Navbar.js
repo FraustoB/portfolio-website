@@ -19,8 +19,6 @@ export default function Navbar() {
                 <Link href='/'><a style={{ textDecoration: 'none' }}> <div className={styles.Brand}>{'<'}frausto.dev{'>'}</div> </a></Link>
                 <button onClick={handleIsToggled}>
                     <span><FaBars /></span>
-                    <span><FaBars /></span>
-                    <span><FaBars /></span>
                 </button>
 
 
