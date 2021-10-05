@@ -22,7 +22,7 @@ export default function About() {
 
                     <div className={styles.Links}>
                         <a rel="noreferrer noopener" target="_blank" href='https://github.com/FraustoB'><span> <FaGithub /></span> Github</a>
-                        <a rel="noreferrer noopener" target="_blank" href='https://www.linkedin.com/in/brandon-frausto-13a712213/'> <span><FaLinkedin /></span> Linkedin </a>
+                        <a rel="noreferrer noopener" target="_blank" href='https://www.linkedin.com/in/brandon-s-frausto-13a712213/'> <span><FaLinkedin /></span> Linkedin </a>
                     </div>
                     <div className={styles.Resume}>
                         <a rel="noreferrer noopener" target="_blank" href='https://drive.google.com/file/d/1kwo5AGmRNz6NM71T8mJRuV6aTuug_ujG/view?usp=sharing'><h2>Resume</h2></a>
